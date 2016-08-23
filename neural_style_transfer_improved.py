@@ -205,7 +205,7 @@ feature_layers = ['conv1_1', 'conv1_2', 'conv2_1', 'conv2_2', 'conv3_1', 'conv3_
 nb_layers = len(feature_layers) - 1
 
 # Correlation Chain
-for i in range(len(feature_layers) - 1):
+for i in range(nb_layers):
     layer_features = outputs_dict[feature_layers[i]]
     style_reference_features = layer_features[1, :, :, :]
     combination_features = layer_features[2, :, :, :]
